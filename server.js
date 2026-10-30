@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
     socket.on('click', (pos) => {
         let removed = false;
 
-        for (let i = circles.length - 1; 1>= 0; i--) {
+        for (let i = circles.length - 1; i >= 0; i--) {
             const c = circles[i];
 
             if (Math.hypot(c.x - pos.x, c.y - pos.y) < c.r) {
@@ -35,7 +35,7 @@ io.on('connection', (socket) => {
                 x: pos.x,
                 y: pos.y,
                 r: 30,
-                color: 'hsl(${Math.floor(Math.random() * 360)}, 80%, 60%'
+                color: `hsl(${Math.floor(Math.random() * 360)}, 80%, 60%`
             });
         }
 
